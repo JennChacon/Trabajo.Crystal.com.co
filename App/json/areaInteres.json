@@ -1,0 +1,182 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "Mercadeo y publicidad"
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "Obra"
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "Operaciones y procesos"
+    },
+    {
+        "codigo" : 4,
+        "nombre" : "Organización y métodos"
+    },
+    {
+        "codigo" : 5,
+        "nombre" : "Producción"
+    },
+    {
+        "codigo" : 6,
+        "nombre" : "Proyectos (análisis, desarrollo, gestión y afines)"
+    },
+    {
+        "codigo" : 7,
+        "nombre" : "Recepción"
+    },
+    {
+        "codigo" : 8,
+        "nombre" : "Recursos Humanos y Admon. de Personal"
+    },
+    {
+        "codigo" : 9,
+        "nombre" : "Redacción y Generación de Contenido"
+    },
+    {
+        "codigo" : 10,
+        "nombre" : "Salud"
+    },
+    {
+        "codigo" : 11,
+        "nombre" : "Secretariado"
+    },
+    {
+        "codigo" : 12,
+        "nombre" : "Seguridad Industrial, Ambiental y Ocupacional"
+    },
+    {
+        "codigo" : 13,
+        "nombre" : "Servicio al Cliente"
+    },
+    {
+        "codigo" : 14,
+        "nombre" : "Servicios Generales, Aseo y Vigilancia"
+    },
+    {
+        "codigo" : 15,
+        "nombre" : "Sistemas"
+    },
+    {
+        "codigo" : 16,
+        "nombre" : "Sistemas y tecnología"
+    },
+    {
+        "codigo" : 17,
+        "nombre" : "Telemercadeo"
+    },
+    {
+        "codigo" : 18,
+        "nombre" : "Ventas"
+    },
+    {
+        "codigo" : 19,
+        "nombre" : "Facturación"
+    },
+    {
+        "codigo" : 20,
+        "nombre" : "Financiera: crédito y tesorería"
+    },
+    {
+        "codigo" : 21,
+        "nombre" : "Gerencia General (cargos corporativos)"
+    },
+    {
+        "codigo" : 22,
+        "nombre" : "Instalación y Reparaciones técnicas"
+    },
+    {
+        "codigo" : 23,
+        "nombre" : "Interventoría"
+    },
+    {
+        "codigo" : 24,
+        "nombre" : "Investigación"
+    },
+    {
+        "codigo" : 25,
+        "nombre" : "Jurídica"
+    },
+    {
+        "codigo" : 26,
+        "nombre" : "Logística y Distribución"
+    },
+    {
+        "codigo" : 27,
+        "nombre" : "Mantenimiento"
+    },
+    {
+        "codigo" : 28,
+        "nombre" : "Materiales: compras e inventario"
+    },
+    {
+        "codigo" : 29,
+        "nombre" : "Mercadeo"
+    },
+    {
+        "codigo" : 30,
+        "nombre" : "Administración: servicios generales"
+    },
+    {
+        "codigo" : 31,
+        "nombre" : "Administrativa y Financiera"
+    },
+    {
+        "codigo" : 32,
+        "nombre" : "Agronomía: naturaleza"
+    },
+    {
+        "codigo" : 33,
+        "nombre" : "Archivo y Documentación"
+    },
+    {
+        "codigo" : 34,
+        "nombre" : "Auditoría, Contraloría e interventoría"
+    },
+    {
+        "codigo" : 35,
+        "nombre" : "Calidad (aseguramiento, gestión y afines)"
+    },
+    {
+        "codigo" : 36,
+        "nombre" : "Comercial, Ventas y Telemercadeo"
+    },
+    {
+        "codigo" : 37,
+        "nombre" : "Comercio Exterior"
+    },
+    {
+        "codigo" : 38,
+        "nombre" : "Compras e Inventarios"
+    },
+    {
+        "codigo" : 39,
+        "nombre" : "Construcción y Obra"
+    },
+    {
+        "codigo" : 40,
+        "nombre" : "Consultoría"
+    },
+    {
+        "codigo" : 41,
+        "nombre" : "Consumo masivo"
+    },
+    {
+        "codigo" : 42,
+        "nombre" : "Contabildiad: cartera y costos"
+    },
+    {
+        "codigo" : 43,
+        "nombre" : "Costos y presupuestos"
+    },
+    {
+        "codigo" : 44,
+        "nombre" : "Diseño y publicidad"
+    },
+    {
+        "codigo" : 45,
+        "nombre" : "Distribución o logística de transporte"
+    }
+]

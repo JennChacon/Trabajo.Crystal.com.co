@@ -1,0 +1,26 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "No aplica"
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "CRYSTAL S.A.S."
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "INDUSTRIAS PRINTEX S.A.S."
+    },
+    {
+        "codigo" : 4,
+        "nombre" : "NICOLE S.A.S."
+    },
+    {
+        "codigo" : 5,
+        "nombre" : "COLHILADOS LTD."
+    },
+    {
+        "codigo" : 6,
+        "nombre" : "PLANTAS CIMARRONA LTDA."
+    }
+]

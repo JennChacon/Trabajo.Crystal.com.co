@@ -1,0 +1,120 @@
+Internal Server Error: /vacantes/1
+Traceback (most recent call last):
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\OneDrive - Crystal S.A.S\Documents\GitHub\TrabajaConNosotros\App\views.py", line 51, in vacantes
+    return render(request, 'App/vacantes.html', context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1139, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 491, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    self.setup_query()
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 42, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 258, in get_select
+    sql, params = self.compile(col)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 423, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\expressions.py", line 772, in as_sql
+    return "%s.%s" % (qn(self.alias), qn(self.target.column)), []
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 414, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "D:\Users\jachacon\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+"GET /vacantes/1 HTTP/1.1" 500 175362
+------ Inicia un nuevo registro 2021-11-19 10:55:45 ------
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+IP del equipo: 10.237.11.101
+nombre: default default
+------ Inicia un nuevo registro 2021-11-19 10:57:17 ------
+------ Inicia un nuevo registro 2021-11-19 10:57:17 ------
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+IP del equipo: 10.237.11.101
+IP del equipo: 10.237.11.101
+nombre: Adriana Chacón
+nombre: Adriana Chacón
+Cargo: Sumate a nuestro equipo
+Cargo: Sumate a nuestro equipo
+Archivo: /media/App/prueba.pdf
+Archivo: /media/App/prueba.pdf
+se guardó en la BD
+se guardó en la BD
+se envío el correo
+se envío el correo
+------ Inicia un nuevo registro 2021-11-19 11:01:25 ------
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+IP del equipo: 10.237.11.101
+nombre: Adriana Chacón
+Cargo: Sumate a nuestro equipo
+Archivo: /media/App/prueba.pdf
+se guardó en la BD
+se envío el correo
+------ Inicia un nuevo registro 2021-11-19 12:16:03 ------
+------ Inicia un nuevo registro 2021-11-19 12:16:03 ------
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+IP del equipo: 10.237.11.101
+IP del equipo: 10.237.11.101
+nombre: Adriana Chacón
+nombre: Adriana Chacón
+Cargo: Administrador de Punto de Venta Cali
+Cargo: Administrador de Punto de Venta Cali
+Archivo: /media/App/prueba.pdf
+Archivo: /media/App/prueba.pdf
+se guardó en la BD
+se guardó en la BD
+se envío el correo
+se envío el correo
+------ Inicia un nuevo registro 2021-11-19 16:31:22 ------
+------ Inicia un nuevo registro 2021-11-19 16:31:22 ------
+------ Inicia un nuevo registro 2021-11-19 16:31:22 ------
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+IP del equipo: 10.237.11.101
+IP del equipo: 10.237.11.101
+IP del equipo: 10.237.11.101
+nombre: Adriana Arevalo
+nombre: Adriana Arevalo
+nombre: Adriana Arevalo
+Cargo: Sumate a nuestro equipo
+Cargo: Sumate a nuestro equipo
+Cargo: Sumate a nuestro equipo
+Archivo: /media/App/prueba.pdf
+Archivo: /media/App/prueba.pdf
+Archivo: /media/App/prueba.pdf
+se guardó en la BD
+se guardó en la BD
+se guardó en la BD
+se envío el correo
+se envío el correo
+se envío el correo

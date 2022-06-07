@@ -1,0 +1,59 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "Preescolar",
+        "grupoArea" : 2
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "Básica Primaria (1° - 5°)",
+        "grupoArea" : 3
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "Básica Secundaria (6° - 9°)",
+        "grupoArea" : 4
+    },
+    {
+        "codigo" : 4,
+        "nombre" : "Media (10° - 13°)",
+        "grupoArea" : 5
+    },
+    {
+        "codigo" : 5,
+        "nombre" : "Técnico Laboral",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 6,
+        "nombre" : "Formación Tec profesional",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 7,
+        "nombre" : "Tecnológica",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 8,
+        "nombre" : "Universitaria",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 9,
+        "nombre" : "Especialización",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 10,
+        "nombre" : "Maestría",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 11,
+        "nombre" : "Doctorado",
+        "grupoArea" : 1
+    }
+]
+
+

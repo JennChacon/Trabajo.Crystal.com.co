@@ -1,0 +1,22 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "Tarjeta identidad"
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "Cédula"
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "Cédula extranjera"
+    },
+    {
+        "codigo" : 4,
+        "nombre" : "Registro civil"
+    },
+    {
+        "codigo" : 5,
+        "nombre" : "Permiso especial de permanencia"
+    }
+]

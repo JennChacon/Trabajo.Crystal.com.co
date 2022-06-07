@@ -1,0 +1,14 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "Si"
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "No"
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "En Proceso"
+    }
+]

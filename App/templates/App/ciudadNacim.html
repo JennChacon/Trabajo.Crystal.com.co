@@ -1,0 +1,10 @@
+<option value="" disabled selected>Selecciona ciudad de nacimiento *</option>
+{% for j in resultDepart %}
+    {% if j.id == depNacim %}
+        {% for i in resultCiudades %}
+            {% if j.id == i.id_state %} 
+                <option value="{{i.id}}">{{i.name}}</option>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}

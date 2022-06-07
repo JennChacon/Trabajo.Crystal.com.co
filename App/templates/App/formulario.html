@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P46S4Q8');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <TITLE>Formulario - Crystal S.A.S</TITLE>
+    <link rel="shortcut icon" href="{% static 'App/images/crystal-sas.png' %}">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P46S4Q8"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="container-fluid contenedor-formulario">
+    <div class="row">
+        <form id="form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="col s12">
+                <div class="row">
+                    <h4>
+                        Quiero participar del proceso
+                    </h4>
+                    <input id="cargo" type="hidden" value="{{ idCargos }}">
+                </div>
+                <div class="row">
+                    <h5>
+                        Datos personales
+                    </h5>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="nombres" type="text" class="validate" title="" style="text-transform: capitalize;"
+                               onchange="toggleInput(this, 'nombres');" required>
+                        <label for="nombres" style="font-size: 15px;color: black;">Nombres *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="apellidos" type="text" class="validate" title="" style="text-transform: capitalize;"
+                               onchange="toggleInput(this, 'apellidos');" required>
+                        <label for="apellidos" style="font-size: 15px;color: black;">Apellidos *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="documento" title=""
+                                onchange="toggleInput(this, 'documento');"
+                                style="font-size: 15px;color: black;" required>
+                            <option value="" disabled selected>Documento de identificación *</option>
+                            {% for d in documento %}
+                                <option value="{{ d.codigo }}">{{ d.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="identificacion" type="text" title="" class="validate"
+                               onchange="toggleInput(this, 'identificacion');" maxlength="15"
+                               onkeyup="this.value=Numeros(this.value)" required>
+                        <label for="identificacion" style="font-size: 15px;color: black;">N° de identificación *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <p style="color: #ab9eab;font-weight: 480;font-size: 15px;color: black;">Fecha de nacimiento *</p>
+                    <div class="input-field">
+                        <div class="col l4 m4 s12">
+                            <select class="browser-default" id="dia" name="dia" title=""
+                                    onchange="toggleInput(this, 'dia');"
+                                    style="font-size: 15px;color: black;" required>
+                                <option value="" disabled selected>Día</option>
+                                {% for d in dias %}
+                                    <option value="{{ d }}">{{ d }}</option>
+                                {% endfor %}
+                            </select>
+                            <br>
+                        </div>
+                        <div class="col l4 m4 s12">
+                            <select class="browser-default" id="mes" name="mes" title=""
+                                    onchange="toggleInput(this, 'mes');"
+                                    style="font-size: 15px;color: black;" required>
+                                <option value="" disabled selected>Mes</option>
+                                {% for d in meses %}
+                                    <option value="{{ d.id }}">{{ d.mes }}</option>
+                                {% endfor %}
+                            </select>
+                            <br>
+                        </div>
+                        <div class="col l4 m4 s12">
+                            <select class="browser-default" id="anio" name="anio" title=""
+                                    onchange="toggleInput(this, 'anio');" style="font-size: 15px;color: black;"
+                                    required>
+                                <option value="" disabled selected>Año</option>
+                                {% for a in anios %}
+                                    <option value="{{ a }}">{{ a }}</option>
+                                {% endfor %}
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="paisNac" name="paisNac" title=""
+                                onchange="ShowSelectedPais(this);" style="font-size: 15px;color: black;" required>
+                            <option value="" disabled selected>País de nacimiento *</option>
+                            {% for p in resultPais %}
+                                <option value="{{ p.id }}">{{ p.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="depNacim" name="depNacim" title=""
+                                onchange="ShowSelectedDep(this);" style="font-size: 15px;color: black;"
+                                data-tooltip="Selecciona primero el país de nacimiento. <br>Luego espere que la opción cambie a '<b>Selecciona departamento de nacimiento</b>'"
+                                required>
+                            <option value="" disabled selected>Departamento de nacimiento *</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="ciudadNacim" name="ciudadNacim" title=""
+                                onchange="toggleInput(this, 'ciudadNac');" style="font-size: 15px;color: black;"
+                                data-tooltip="Selecciona primero el departamento de nacimiento. <br>Luego espere que la opción cambie a '<b>Selecciona ciudad de nacimiento</b>'"
+                                required>
+                            <option value="" disabled selected>Ciudad de nacimiento *</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <p style="color: #ab9eab;font-weight: 480;font-size: 15px;color: black;">Género *</p>
+                    <div class="col l12 m12 s12">
+                        <a class="waves-effect waves-light genero btn-large" id="femenino">
+                            <i class="fa fa-female"></i></a>
+                        <a class="waves-effect waves-light genero btn-large" id="masculino">
+                            <i class="fa fa-male"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row"></div>
+                <div class="row">
+                    <div class="input-field">
+                        <p style="color: #ab9eab;font-weight: 480;font-size: 15px;color: black;">Trabajo o he trabajado
+                            en Crystal o en sus empresas filiales</p>
+                        <select class="browser-default" id="trabajoEnCrystal" title=""
+                                onchange="toggleInput(this, 'trabajoEnCrystal');" style="font-size: 15px;color: black;"
+                                required>
+                            <option value="" disabled selected>¿En cual?</option>
+                            {% for t in trabajoEnCrystal %}
+                                <option value="{{ t.codigo }}">{{ t.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Contacto
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="email" type="email" class="validate" title="" onchange="toggleInput(this, 'email');"
+                               required>
+                        <label for="email" style="font-size: 15px;color: black;">Correo *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="telefono" type="text" class="validate" title=""
+                               onkeyup="this.value=Numeros(this.value)" onchange="toggleInput(this, 'telefono');"
+                               required>
+                        <label for="telefono" style="font-size: 15px;color: black;">Teléfono *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="telefonoOp" type="text" title="" class="validate"
+                               onkeyup="this.value=Numeros(this.value)" onchange="toggleInput(this, 'telefonoOp');">
+                        <label for="telefonoOp" style="font-size: 15px;color: black;">Teléfono adicional</label>
+                        <span class="span-gray">opcional</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Lugar de residencia
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="depResi" name="depResi" title=""
+                                onchange="ShowSelectedDepResi(this);" style="font-size: 15px;color: black;" required>
+                            <option value="" disabled selected>Departamento de residencia *</option>
+                            {% for d in resultDepart %}
+                                {% if d.id_country == 82 %}
+                                    <option value="{{ d.id }}">{{ d.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="ciudadResi" name="ciudadResi"
+                                onchange="toggleInput(this, 'ciudadResi');" style="font-size: 15px;color: black;"
+                                data-tooltip="Selecciona primero el departamento de residencia. <br>Luego espere que la opción cambie a '<b>Selecciona ciudad de residencia</b>'"
+                                title="" required>
+                            <option value="" disabled selected>Ciudad de residencia *</option>
+                        </select>
+                    </div>
+                </div>
+                <!--
+                        <div class="row">
+                            <div class="input-field">
+                                <input id="address" type="text" class="validate" title="" onchange="ShowSelectedAddress();" required>
+                                <label for="address" style="font-size: 15px;color: black;">Dirección *</label>
+                            </div>
+                        </div>
+                        -->
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Dirección
+                    </div>
+                </div>
+                <div class="row" style="margin-block-end: 0%;">
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default validate" id="tipoVia" name="tipoVia" onchange="ShowSelectedDreccion();"
+                                style="font-size: 15px;color: black;" title="" required>
+                            <option value="" disabled selected>Tipo de vía *</option>
+                            {% for t in tipoVia %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <input id="numDireccion" type="text" class="validate" title=""
+                               onkeyup="this.value=Numeros(this.value)" onchange="ShowSelectedDreccion();" required>
+                        <label for="numDireccion" style="font-size: 15px;color: black;">Número dirección *</label>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default" id="letraDire" name="letraDire"
+                                onchange="ShowSelectedDreccion();" style="font-size: 15px;color: black;" title="">
+                            <option value="" disabled selected>Letra</option>
+                            {% for t in letraDire %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-block-end: 0%;">
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default" id="cuadrante" name="cuadrante"
+                                onchange="ShowSelectedDreccion();" style="font-size: 15px;color: black;" title="">
+                            <option value="" disabled selected>Cuadrante</option>
+                            {% for t in cuadrante %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <input id="numDireccion1" type="text" class="validate" title=""
+                               onkeyup="this.value=Numeros(this.value)" onchange="ShowSelectedDreccion();">
+                        <label for="numDireccion1" style="font-size: 15px;color: black;">Número dirección 1</label>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default" id="letraDire1" name="letraDire1"
+                                onchange="ShowSelectedDreccion();" style="font-size: 15px;color: black;" title="">
+                            <option value="" disabled selected>Letra 1</option>
+                            {% for t in letraDire %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-block-end: 0%;">
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default" id="cuadrante1" name="cuadrante1"
+                                onchange="ShowSelectedDreccion();" style="font-size: 15px;color: black;" title="">
+                            <option value="" disabled selected>Cuadrante 1</option>
+                            {% for t in cuadrante %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <input id="numDireccion2" type="text" class="validate" title=""
+                               onkeyup="this.value=Numeros(this.value)" onchange="ShowSelectedDreccion();">
+                        <label for="numDireccion2" style="font-size: 15px;color: black;">Número dirección 2</label>
+                    </div>
+                    <div class="col l4 m12 s12 input-field">
+                        <select class="browser-default" id="claseVivienda" name="claseVivienda"
+                                onchange="ShowSelectedDreccion();" style="font-size: 15px;color: black;" title="">
+                            <option value="" disabled selected>Clase de vivienda</option>
+                            {% for t in claseVivienda %}
+                                <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-block-end: 0%;">
+                    <div class="col l4 m12 s12 input-field">
+                        <input id="numDireccion3" type="text" class="validate" title=""
+                               onkeyup="this.value=Numeros(this.value)" onchange="ShowSelectedDreccion();">
+                        <label for="numDireccion3" style="font-size: 15px;color: black;">Número dirección 3</label>
+                    </div>
+                </div>
+                <div class="row" style="margin-block-end: 0%;">
+                    <div class="col s12 input-field">
+                        <textarea id="direccionComple" title="" disabled></textarea>
+                        <span>Dirección completa</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Estudios
+                    </div>
+                </div>
+                <div class="row">
+                    <fieldset id="AdiciEstu">
+
+                    </fieldset>
+                    <button style="cursor: pointer;" title="" type="button" class="waves-effect waves-light idioma btn"
+                            id="addEstu">+ Adicionar Estudio
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Tus idiomas
+                    </div>
+                </div>
+                <div class="row">
+                    <fieldset id="Adicidioma">
+
+                    </fieldset>
+                    <button style="cursor: pointer;" title="" type="button" class="waves-effect waves-light idioma btn"
+                            id="add">+ Adicionar idioma
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Experiencia laboral
+                    </div>
+                </div>
+                <div class="row">
+                    <fieldset id="Expelaboral">
+
+                    </fieldset>
+                    <button style="cursor: pointer;" title="" type="button" class="waves-effect waves-light idioma btn"
+                            id="addExp">+ Adicionar empresa
+                    </button>
+                </div>
+                <div class="row"></div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Áreas de interés
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="areasInte" title="" style="font-size: 15px;color: black;"
+                                onchange="toggleInput(this, 'areasInte');" required>
+                            <option value="" disabled selected>Áreas de interés *</option>
+                            {% for a in areaInteres %}
+                                <option value="{{ a.codigo }}">{{ a.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="areaInteOtr" type="text" title="" class="validate"
+                               onchange="toggleInput(this, 'areaInteOtr');">
+                        <label for="areaInteOtr" style="font-size: 15px;color: black;">Áreas de interés (otras)</label>
+                        <span class="span-gray">opcional</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="ultiSal" type="text" class="validate" title=""
+                               onchange="toggleInput(this, 'ultiSal');"
+                               onkeyup="this.value=Numeros(this.value)" required>
+                        <label for="ultiSal" style="font-size: 15px;color: black;">Último salario recibido *</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <select class="browser-default" id="aspSal" title="" style="font-size: 15px;color: black;"
+                                onchange="toggleInput(this, 'aspSal');" required>
+                            <option value="" disabled selected>Aspiración salarial *</option>
+                            {% for s in aspSal %}
+                                <option value="{{ s.codigo }}">{{ s.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="subtitulo-formulario">
+                        Adjuntar hoja de vida
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="file-field input-field" id="fileDiv">
+                        <div class="adjuntar btn">
+                            <i class="fa fa-file icono-archivo"></i> Subir
+                            <input id="file" type="file" name="archivoHV" accept="application/pdf, .doc"
+                                   onchange="ShowSelectedArchivo(this);" required>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" title="" style="font-size: 15px;color: black;"
+                                   placeholder="Sube un archivo">
+                        </div>
+                        <span class="span-gray">Los ficheros deben ser inferiores a: 2 MB</span>
+                        <br>
+                        <span class="span-gray">Ficheros permitidos: pdf, .doc</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>
+                        <label>
+                            <input type="checkbox" id="politica" value="check" required/>
+                            <span class="span-gray">Consiento que mis datos sean utilizados para esta vacante y para
+                                futuros
+                                procesos de selección que encajen con mi perfil. Para ello acepto la
+                                <a class="modal-trigger" href="#modal1">Política de Privacidad</a> *</span>
+                        </label>
+                    </p>
+                </div>
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h5><b>POLÍTICA DE TRATAMIENTO PROTECCIÓN DE DATOS PERSONALES – CRYSTAL S.A.S</b></h5>
+                        <p>En cumplimiento a lo dispuesto en la Ley estatutaria 1581 de 2012, especialmente a
+                            lo dispuesto en sus artículos 9 y 12, a su Decreto Reglamentario 1377 de 2013 y
+                            las demás normas pertinentes, Crystal S.A.S, identificada con el NIT 890.901.672-5,
+                            informa la política de esta sociedad, como responsable del tratamiento de datos
+                            personales, para el tratamiento y protección de los mismos.
+                        </p>
+                        <br>
+                        <h6><b>I. IDENTIFICACIÓN DEL RESPONSABLE:</b></h6>
+                        <p><b>NOMBRE DEL RESPONSABLE:</b> CRYSTAL S.A.S<br>
+                            <b>DIRECCIÓN:</b> Carrera 48 N 52 S 81 avenida las vegas, Sabaneta Antioquia <br>
+                            <b>CORREO ELECTRÓNICO:</b> impuestos@crystal.com.co<br>
+                            <b>TELEFÓNO DEL RESPONSABLE:</b> 2619000 EXT 2231
+                        </p>
+                        <br>
+                        <p><b>II. TRATAMIENTO Y FINALIDAD:</b></p>
+                        <p><b>TRATAMIENTO DE DATOS PERSONALES:</b><br>
+                            La Sucursal CRYSTAL S.A.S, sujeta a las disposiciones constitucionales y legales,
+                            se regirá en su roll de responsable del tratamiento de datos personales por los
+                            principios rectores que en esta materia ha dispuesto el ordenamiento jurídico
+                            colombiano, estos son, según el artículo 4 de la ley 1581 de 2012:
+                        </p>
+                        <p><b>- PRINCIPIO DE LEGALIDAD EN MATERIA DE TRATAMIENTO DE DATOS:</b>
+                            CRYSTAL S.A.S administrará sus bases de datos de las cuales es responsable
+                            con total sujeción a los postulados constitucionales y legales que regulan la materia.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE FINALIDAD:</b>
+                            La finalidad para la cual se administra y
+                            trata los datos personales será completamente ajustada a la ley; serán
+                            legítimamente utilizados para el desarrollo de las actividades comerciales,
+                            operacionales y/o administrativas de la sociedad.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE LIBERTAD:</b>
+                            CRYSTAL tratará únicamente aquellos datos de los cuales tenga consentimiento o
+                            aquellos que sin el consentimiento la ley les habilite para su tratamiento.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE VERACIDAD O CALIDAD:</b>
+                            Se velará constantemente por el almacenamiento y tratamiento de información veraz,
+                            actual y exacta; así mismo se implementarán medidas permanentes que propendan por
+                            la actualización de los datos que se almacenan procurando el no tratamiento de
+                            datos parciales, incompletos, fraccionados o que induzcan a error, lo cual está
+                            expresamente prohibido en la ley.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE TRANSPARENCIA:</b>
+                            CRYSTAL S.A.S dispondrá de un mecanismo de comunicación donde los titulares de
+                            los datos podrán acudir en cualquier tiempo con el ánimo de obtener información
+                            sobre los datos personales que son objeto de tratamiento por parte de esta
+                            sociedad y ejercitar los derechos que le asisten según el artículo 15 de la
+                            Constitución Política de Colombia (Derecho al Habeas Data).
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE ACCESO Y CIRCULACIÓN RESTRINGIDA:</b>
+                            Se garantiza el control y la restricción a los datos almacenados,
+                            especialmente a aquellos datos que por su naturaleza requieren un
+                            tratamiento especial (datos sensibles, de los niños, niñas y adolescentes.),
+                            de manera que sólo tendrán acceso a ellos quienes tengan la debida autorización.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE SEGURIDAD:</b>
+                            Se tomarán las medidas necesarias y adecuadas para la protección de los datos
+                            almacenados no solamente por parte de CRYSTAL S.A.S como responsable del
+                            tratamiento de datos sino, también, por parte de cualquier encargado del
+                            tratamiento de los mismos.
+                        </p>
+                        <p>
+                            <b>- PRINCIPIO DE CONFIDENCIALIDAD:</b>
+                            CRYSTAL S.A.S garantizará la confidencialidad de la información almacenada y
+                            realizará el suministro o comunicación de la misma únicamente cuando ello
+                            corresponda al desarrollo de las actividades autorizadas en la ley. En tal medida,
+                            CRYSTAL S.A.S únicamente recopilará y tratará los datos almacenados para el
+                            ejercicio y desarrollo de actividades propias de su objeto social, especialmente
+                            para para obtener, analizar o verificar información de candidatos que participan
+                            en procesos de Selección dentro de la compañía o sus afiliadas y para validar
+                            aspectos relacionados con su trayectoria laboral. Igualmente la información del
+                            aspirante, en caso de requerirse será utilizada para estudios de seguridad y
+                            realizar visitas domiciliarias previamente pactadas con el aspirante; para lo cual,
+                            eventualmente y sólo para los fines descritos, podrá compartir la información con
+                            empresas como COLHILADOS LTD., NICOLE S.A.S., PRINTEX S.A.S. TEXTIL DE HILOS E
+                            HILAZAS S.A.S., PARKDALE INC., CORPORACIÓN CIMARRONA S.A.S.INVERBORDADOS S.A.S,
+                            además de aquellas empresas que fungirán como encargadas del tratamiento y que
+                            tratarán las bases de datos de CRYSTAL SAS bajo los parámetros que exige la ley.
+                        </p>
+                        <br>
+                        <p>
+                            <b>III. DERECHOS QUE LE ASISTEN A LOS TITULARES DE LOS DATOS:</b>
+                        </p>
+                        <p>
+                            En pleno desarrollo de las disposiciones del artículo 15 de la Constitución Política
+                            de Colombia y sus normas reglamentarias, al titular de los datos personales le
+                            asisten los siguientes Derechos:
+                        </p>
+                        <p>
+                            <b>Derecho de conocer:</b> Al titular de los datos le asiste el Derecho de conocer qué
+                            datos personales suyos tienen en su poder los responsables y/o encargados del
+                            tratamiento de datos.<br>
+                            <b>Derecho de actualizar:</b> Al titular de los datos le asiste el Derecho de actualizar
+                            permanentemente los datos que son tratados por el responsable y/o encargado del
+                            tratamiento de datos con el ánimo de que los mismos estén ajustados a la realidad
+                            y permitan una calidad óptima de la información.<br>
+                            <b>Derecho de rectificar:</b> Al titular de los datos le asiste el Derecho de rectificar
+                            los datos personales que el responsable y/o encargado del tratamiento estén tratando
+                            por encontrarlo errado.<br>
+                            <b>Derecho de suprimir:</b> Al titular de los datos le asiste el Derecho a dar de baja
+                            de las bases de datos tratadas por el responsable y/o encargado del dato en el
+                            momento que así lo desee.<br>
+                            <b>Derecho de revocar la autorización:</b> Al titular de los datos personales le asiste
+                            el Derecho de revocar la autorización que fuera otorgada inicialmente para el
+                            tratamiento de los datos por parte del responsable.
+                        </p>
+                        <p>
+                            Esta revocatoria puede ser total o parcial según el titular así lo quieren,
+                            y siempre que se informe de tal situación oportunamente.
+                        </p>
+                        <p>
+                            El titular de los datos personales tendrá la facultad de decidir responder o no
+                            a las preguntas que le sean hechas cuando las mismas versen sobre datos sensibles
+                            o sobre datos de las niñas, niños y adolescentes, como lo dispone el literal “b”
+                            del artículo 12 de la ley 1581. En ningún caso serán tratados los datos personales
+                            que, requiriéndolo, no cuenten con el consentimiento previo, expreso e informado
+                            del titular al tenor del artículo 9 de la ley 1581.
+                        </p>
+                        <br>
+                        <p>
+                            <b>IV. PERSONA RESPONSABLE Y PROCEDIMIENTO PARA LA ATENCIÓN DE LAS CONSULTAS, PETICIONES Y
+                                RECLAMOS:</b>
+                        </p>
+                        <p>
+                            CRYSTAL S.A.S, en aras de establecer un canal permanente de comunicación con los
+                            titulares de los datos, facilitando de esta manera la atención oportuna y
+                            permanente a sus consultas, peticiones y reclamos, ha dispuesto que quien
+                            quiera ejercer su derecho de conocer, rectificar, suprimir o revocar autorización,
+                            podrá comunicarse expresando claramente la intención de su comunicación al correo
+                            electrónico Proteccionbasedatos@crystal.com.co, dirigido a Julian Aristizabal Escobar.<br>
+                            Una vez recibido el correo por parte del funcionario de CRYSTAL S.A.S, esta
+                            sociedad contará con un término de 15 días para dar respuesta al mismo por
+                            el mismo medio.
+                        </p>
+                        <br>
+                        <p>
+                            <b>V. VIGENCIA DE LA BASE DE DATOS:</b>
+                        </p>
+                        <p>
+                            Esta política entrará en vigencia a partir del día 22 de febrero de 2016 y cualquier
+                            modificación sustancial a la misma será informada oportunamente a través de los
+                            medios idóneos con los que se cuente para tales fines.<br>
+                            De esta manera Crystal S.A.S cumple con la normatividad vigente y aplicable a la
+                            materia de protección y tratamiento de datos personales a nivel nacional.
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+                    </div>
+                </div>
+                <div class="row enviar">
+                    <button type="submit" id="enviar" class="waves-effect waves-light formulario btn-large">
+                        Enviar formulario
+                    </button>
+                </div>
+                <div class="col s12" style="text-align: -webkit-center;display: none;" id="load">
+                    <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="text-align: center;">¡Espere un momento, por favor!</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'App/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'App/css/formulario.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="{% static 'App/js/formulario.js' %}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfSM6saAAAAAKDKSFz07KrFs_bsOEn02foBi-q_" async
+        defer></script>
+
+<template id="opciones-estudio">
+    <div class="row">
+        <div class="col l12 m12 s12 input-field">
+            <select name="formacion" class="browser-default" onchange="ShowSelectedEstudio(this);" title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Nivel de estudio *</option>
+                {% for s in formacion %}
+                    <option value="{{ s.codigo }}">{{ s.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col l12 m12 s12 input-field">
+            <select name="areasEst" class="browser-default" onchange="ShowSelectedAreasEst(this);" title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Área *</option>
+            </select>
+        </div>
+        <div class="col l12 m12 s12 input-field">
+            <select name="tarProfe" class="browser-default" onchange="ShowSelectedTarProfe(this);" title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Tarjeta profesional *</option>
+                {% for s in tarProfe %}
+                    <option value="{{ s.codigo }}">{{ s.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col l12 m12 s12 input-field">
+            <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;margin:0%;">
+                Institución *
+            </p>
+            <input name="institucion" type="text" class="validate" title="" onchange="ShowSelectedInstitucion(this);"
+                   required>
+        </div>
+        <div class="col l12 m12 s12 input-field">
+            <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;margin:0%">
+                Fecha finalización *
+            </p>
+        </div>
+        <div class="col l6 m6 s12" style="margin-block-end:4%;">
+            <select class="browser-default"
+                    name="mesEstu"
+                    onchange='ShowSelectedMesEstu(this);'
+                    title=""
+                    style="font-size: 15px;color: black;"
+                    required>
+                <option value="" disabled selected>Mes *</option>
+                {{ mesEstu|safe }}
+            </select>
+        </div>
+        <div class="col l6 m6 s12">
+            <select id="anioEstu${i}" class="browser-default"
+                    name="anioEstu"
+                    onchange='ShowSelectedAnioEstu(this);' title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Año *</option>
+                {{ anioEstu|safe }}
+            </select>
+        </div>
+        <div class="col l12 m12 s12" style="margin-top:2%;">
+            <button onclick="eliminar(this.parentElement.parentElement)" type="button"
+                    class="waves-effect waves-light btn right"
+                    style="color:white;background-color:rgb(187 187 187);font-weight: 500;">
+                Eliminar
+            </button>
+            <br>
+            <br>
+        </div>
+        <br>
+    </div>
+</template>
+
+<template id="opciones-idioma">
+    <div class="input-field">
+        <br>
+        <select name="idioma" class="browser-default" onchange="ShowSelectedIdioma(this);" title=""
+                style="font-size: 15px;color: black;">
+            <option value="" disabled selected>Idioma</option>
+            {% for s in idiomas %}
+                <option value="{{ s.codigo }}">{{ s.nombre }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <select name="nivel" class="browser-default" onchange="ShowSelectedNivel(this);" title=""
+                style="font-size: 15px;color: black;">
+            <option value="" disabled selected>Nivel</option>
+            <option value="Alto">Alto</option>
+            <option value="Medio">Medio</option>
+            <option value="Bajo">Bajo</option>
+        </select>
+        <br>
+        <button onclick="eliminar(this.parentElement)" type="button" class="waves-effect waves-light btn right"
+                style="color:white;background-color:rgb(187 187 187);font-weight: 500;">
+            Eliminar
+        </button>
+        <br>
+    </div>
+</template>
+
+<template id="opciones-empresa">
+    <div class="input-field">
+        <br>
+        <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;">
+            Empresa*
+            <input name="empresa" type="text" class="validate" title="" onchange="ShowSelectedEmpresa(this);" required>
+        </p>
+        <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;">
+            Cargo*
+            <input name="cargo" type="text" class="validate" title="" onchange="ShowSelectedCargo(this);" required>
+        </p>
+        <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;">Funciones y logros*</p>
+        <textarea name="funciones" class="validate" onchange="ShowSelectedFunciones(this);" style="height: 280px;"
+                  title=""
+                  required placeholder="  Por favor evite incluir muchos caracteres especiales"></textarea>
+        <p style="color: #ab9eab;cursor: auto;font-weight: 480;font-size: 15px;color: black;">
+            Fecha finalización*
+        </p>
+        <div class="col l6 m6 s12" style="margin-block-end:4%;">
+            <select name="mesExp" class="browser-default" onchange="ShowSelectedMesExp(this);" title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Mes *</option>
+                {{ mesEstu|safe }}
+            </select>
+        </div>
+        <div class="col l6 m6 s12">
+            <select name="anioExp" class="browser-default" onchange="ShowSelectedAnioExp(this);" title=""
+                    style="font-size: 15px;color: black;" required>
+                <option value="" disabled selected>Año *</option>
+                {{ anioEstu|safe }}
+            </select>
+        </div>
+        <div class="col l12 m12 s12" style="margin-top:2%;">
+            <button onclick="eliminar(this.parentElement.parentElement)" type="button"
+                    class="waves-effect waves-light btn right"
+                    style="color:white;background-color:rgb(187 187 187);font-weight: 500;">
+                Eliminar
+            </button>
+            <br>
+        </div>
+        <br>
+        <br>
+    </div>
+</template>
+
+<script>
+    function Numeros(string) {
+        let out = '';
+        let filtro = '1234567890';
+
+        for (let i = 0; i < string.length; i++) {
+            if (filtro.indexOf(string.charAt(i)) !== -1) {
+                out += string.charAt(i);
+            }
+        }
+
+        return out;
+    }
+
+    function eliminar(element) {
+        element.parentNode.removeChild(element);
+    }
+
+    document.addEventListener('DOMContentLoaded', (ev) => {
+        gen = null;
+        const btnEnviar = document.getElementById('enviar');
+        const loader = document.getElementById('load');
+
+        $('.modal').modal();
+        $('#ciudadResi').tooltip({
+            position: 'right',
+            html: true
+        });
+        $('#ciudadNacim').tooltip({
+            position: 'right',
+            html: true
+        });
+        $('#depNacim').tooltip({
+            position: 'right',
+            html: true
+        });
+        document.getElementById('form').addEventListener('submit', function (e) {
+            
+            e.preventDefault();
+            btnEnviar.style.display = 'none';
+            loader.style.display = '';
+
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6LfSM6saAAAAAKDKSFz07KrFs_bsOEn02foBi-q_', {
+                    action: 'validar'
+                }).then((token) => {
+                    validar();
+                });
+            });
+        });
+
+        document.getElementById('addEstu').addEventListener('click', agregarEstudio);
+        document.getElementById('add').addEventListener('click', agregarIdioma);
+        document.getElementById('addExp').addEventListener('click', agregarEmpresa);
+
+        /** Funciones **/
+        function agregarEstudio(ev) {
+            const container = document.getElementById('AdiciEstu');
+            if (container.children.length < 4) {
+                const options = document.getElementById('opciones-estudio').content.cloneNode(true);
+                container.appendChild(options);
+            }
+        }
+
+        function agregarIdioma(ev) {
+            const container = document.getElementById('Adicidioma');
+            if (container.children.length < 3) {
+                const options = document.getElementById('opciones-idioma').content.cloneNode(true);
+                container.appendChild(options);
+            }
+        }
+
+        function agregarEmpresa(ev) {
+            const container = document.getElementById('Expelaboral');
+            const options = document.getElementById('opciones-empresa').content.cloneNode(true);
+            if (container.children.length < 10) {
+                container.appendChild(options);
+            }
+        }
+
+        const btnFemenino = document.getElementById('femenino');
+        const btnMasculino = document.getElementById('masculino');
+
+        btnFemenino.addEventListener('click', (e) => {
+            gen = "Femenino";
+            btnFemenino.style.background = "#e8f0fe";
+            btnMasculino.style.background = "transparent";
+            btnFemenino.style.border = "2px solid #4caf50";
+            btnMasculino.style.border = "0px solid";
+        });
+
+        btnMasculino.addEventListener('click', (e) => {
+            gen = "Masculino";
+            btnFemenino.style.background = "transparent";
+            btnMasculino.style.background = "#e8f0fe";
+            btnMasculino.style.border = "2px solid #4caf50";
+            btnFemenino.style.border = "0px solid";
+        });
+    });
+
+    function toggleInput(input, formVariable, parent) {
+        const inputTag = input.tagName.toLowerCase();
+        let varName = `v_${formVariable}`;
+        if (parent) {
+            const index = Array.from(parent.querySelectorAll(`${inputTag}[name="${input.name}"]`)).indexOf(input)
+            varName = `v_${formVariable}${index + 1}`
+        }
+
+        if (input.value) {
+            window[varName] = input.value;
+            input.style.background = "#e8f0fe"
+            if (inputTag === 'select' || inputTag === 'textarea') {
+                input.style.border = "2px solid #4caf50"
+            }
+        } else {
+            window[varName] = '';
+            input.style.background = "white";
+            if (inputTag === 'select' || inputTag === 'textarea') {
+                input.style.border = "1px solid #9e9e9e";
+            }
+        }
+    }
+
+    function ShowSelectedEstudio(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'formacion', parent);
+        console.log("est " +input.value)
+        if (input.value !== '') {
+            const url = `/estudios/?formacion=${input.value}`;
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    const areasElement = input.parentElement.parentElement.querySelector('select[name="areasEst"]');
+                    areasElement.innerHTML = html;
+                    areasElement.value = '';
+                    toggleInput(areasElement, 'areasEst', parent);
+                });
+        }
+    }
+
+    function ShowSelectedAreasEst(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'areasEst', parent);
+    }
+
+    function ShowSelectedTarProfe(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'tarProfe', parent);
+    }
+
+    function ShowSelectedInstitucion(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'institucion', parent);
+    }
+
+    function ShowSelectedMesEstu(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'mesEstu', parent);
+    }
+
+    function ShowSelectedAnioEstu(input) {
+        const parent = document.getElementById('AdiciEstu');
+        toggleInput(input, 'anioEstu', parent);
+    }
+
+    function ShowSelectedIdioma(input) {
+        const parent = document.getElementById('Adicidioma');
+        toggleInput(input, 'idioma', parent);
+    }
+
+    function ShowSelectedNivel(input) {
+        const parent = document.getElementById('Adicidioma');
+        toggleInput(input, 'nivel', parent);
+    }
+
+    function ShowSelectedEmpresa(input) {
+        const parent = document.getElementById('Expelaboral');
+        toggleInput(input, 'empresa', parent);
+    }
+
+    function ShowSelectedCargo(input) {
+        const parent = document.getElementById('Expelaboral');
+        toggleInput(input, 'cargo', parent);
+    }
+
+    function ShowSelectedFunciones(input) {
+        const parent = document.getElementById('Expelaboral');
+        toggleInput(input, 'funciones', parent);
+    }
+
+    function ShowSelectedMesExp(input) {
+        const parent = document.getElementById('Expelaboral');
+        toggleInput(input, 'mesExp', parent);
+    }
+
+    function ShowSelectedAnioExp(input) {
+        const parent = document.getElementById('Expelaboral');
+        toggleInput(input, 'anioExp', parent);
+    }
+
+    function ShowSelectedDreccion() {
+        tipoVia = document.getElementById("tipoVia").value;
+        numDireccion = document.getElementById("numDireccion").value;
+        letraDire = document.getElementById("letraDire").value;
+        cuadrante = document.getElementById("cuadrante").value;
+        numDireccion1 = document.getElementById("numDireccion1").value;
+        letraDire1 = document.getElementById("letraDire1").value;
+        cuadrante1 = document.getElementById("cuadrante1").value;
+        numDireccion2 = document.getElementById("numDireccion2").value;
+        claseVivienda = document.getElementById("claseVivienda").value;
+        numDireccion3 = document.getElementById("numDireccion3").value;
+        let btntipoVia = document.getElementById("tipoVia");
+        let btnletraDire = document.getElementById("letraDire");
+        let btncuadrante = document.getElementById("cuadrante");
+        let btnletraDire1 = document.getElementById("letraDire1");
+        let btncuadrante1 = document.getElementById("cuadrante1");
+        let btnclaseVivienda = document.getElementById("claseVivienda");
+
+        //let direccionCompleta = tipoVia + " " + numDireccion + " " + letraDire + " " + cuadrante + " " + numDireccion1 +
+        //    " " + letraDire1 + " " + cuadrante1 + " " + numDireccion2 + " " + claseVivienda + " " + numDireccion3
+
+        let direccionCompleta = `${tipoVia} ${numDireccion}`;
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, letraDire);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, cuadrante);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, numDireccion1);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, letraDire1);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, cuadrante1);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, numDireccion2);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, claseVivienda);
+        direccionCompleta = agregarComponenteDireccion(direccionCompleta, numDireccion3);
+
+        fijarFormatoElemento(btntipoVia, tipoVia != "");
+        fijarFormatoElemento(btnletraDire, letraDire != "");
+        fijarFormatoElemento(btncuadrante, cuadrante != "");
+        fijarFormatoElemento(btnletraDire1, letraDire1 != "");
+        fijarFormatoElemento(btncuadrante1, cuadrante1 != "");
+        fijarFormatoElemento(btnclaseVivienda, claseVivienda != "");
+
+        if (cuadrante === "Sin selección") {
+            cuadrante = ""
+        }
+        if (cuadrante1 === "Sin selección") {
+            cuadrante1 = ""
+        }
+
+        document.getElementById("direccionComple").value = direccionCompleta
+        direccionComple = document.getElementById("direccionComple").value
+    }
+    function agregarComponenteDireccion(direccion, componente){
+        if (componente){
+            return `${direccion} ${componente}`;
+        } 
+        return direccion;
+    }
+    function fijarFormatoElemento(elemento, completo){
+        if (completo){
+            
+            elemento.classList.remove("incompleto");
+            elemento.classList.add("completo")
+
+        }
+    }
+    function ShowSelectedPais(input) {
+        toggleInput(input, 'paisNacim')
+        const url = `/depNacim/?paisNac=${input.value}`;
+        fetch(url)
+            .then(function (result) {
+                return result.text();
+            })
+            .then(function (result) {
+                document.getElementById("depNacim").innerHTML = result;
+            });
+    }
+
+    function ShowSelectedDep(input) {
+        toggleInput(input, 'depNac')
+        let url = `/ciudadNacim/?depNacim=${input.value}`;
+        fetch(url)
+            .then(function (result) {
+                return result.text();
+            })
+            .then(function (result) {
+                document.getElementById('ciudadNacim').innerHTML = result;
+            });
+    }
+
+    function ShowSelectedDepResi(input) {
+        toggleInput(input, 'depResiden')
+        let url = "/ciudadResi/?depResi=" + input.value;
+        fetch(url)
+            .then(function (result) {
+                return result.text();
+            })
+            .then(function (result) {
+                document.getElementById("ciudadResi").innerHTML = result;
+            });
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    const csrftoken = getCookie('csrftoken');
+
+    function ShowSelectedArchivo(input) {
+        const file = input.files.item(0);
+        const btnfile = document.getElementById('fileDiv');
+        if (file.type === 'application/pdf' || file.type === 'application/msword') {
+            if (file.size > 2000000) {
+                alert("El archivo no debe superar los 2MB")
+                input.value = "";
+                btnfile.style.background = "white"
+                M.toast({html: 'NO se adjuntó la hoja de vida!', classes: 'rounded'})
+            } else {
+                btnfile.style.background = "#e8f0fe"
+                M.toast({html: 'La hoja de vida se adjuntó correctamente!', classes: 'rounded'})
+            }
+        } else {
+            alert("Solo se permiten archivos con formato pdf, .doc")
+            btnfile.style.background = "white"
+            input.value = "";
+            M.toast({html: 'NO se adjuntó la hoja de vida!', classes: 'rounded'})
+        }
+    }
+
+    function validar() {
+        try {
+            let datosValidos = true;
+            if (!v_nombres || !v_apellidos || !v_documento || !v_identificacion || !v_dia || !v_mes || !v_anio
+                || !v_paisNacim || !v_depNac || !v_ciudadNac) {
+                datosValidos = false;
+            }
+
+            let validacionDireccion = true;
+            if (!v_trabajoEnCrystal || !v_email || !v_telefono || !tipoVia || !numDireccion || !v_depResiden || !v_ciudadResi) {
+                validacionDireccion = false;
+            }
+
+            let aspiracionSalValido = true;
+            if (!v_areasInte || !v_ultiSal || !v_aspSal) {
+                aspiracionSalValido = false;
+            }
+
+            const file = document.getElementById('file').files[0];
+            let hojaDeVidaValido = true;
+            if (!file) {
+                hojaDeVidaValido = false;
+            }
+
+            politica = document.getElementById('politica').checked;
+            let aceptaPoliticas = true;
+            if (!politica) {
+                aceptaPoliticas = false;
+            }
+
+            let generoValido = true;
+            if (!gen) {
+                alert("Por favor, ingresa el género");
+                generoValido = false;
+            }
+
+            /** Validación de estudios **/
+            let estudioValido = true;
+            const cantidadEstudios = document.getElementById('AdiciEstu').children.length;
+            if (cantidadEstudios === 0) {
+                alert("Por favor, ingresa al menos un estudio");
+                estudioValido = false;
+            } else {
+                for (let i = 0; i < cantidadEstudios; i++) {
+                    if (!window[`v_formacion${i + 1}`] || !window[`v_areasEst${i + 1}`] || !window[`v_tarProfe${i + 1}`] ||
+                        !window[`v_institucion${i + 1}`] || !window[`v_mesEstu${i + 1}`] || !window[`v_anioEstu${i + 1}`]) {
+                        estudioValido = false;
+                        break;
+                    }
+                }
+            }
+
+            /** Validación experiencia laboral **/
+            let experienciaValida = true;
+            const cantidadExperiencia = document.getElementById('Expelaboral').children.length;
+            if (cantidadExperiencia === 0) {
+                experienciaValida = false;
+                alert("Por favor, ingresa al menos una experiencia laboral");
+            } else {
+                for (let i = 0; i < cantidadExperiencia; i++) {
+                    const idx = i + 1;
+                    if (!window[`v_empresa${idx}`] || !window[`v_cargo${idx}`] || !window[`v_funciones${idx}`]
+                        || !window[`v_mesExp${idx}`] || !window[`v_anioExp${idx}`]) {
+                        experienciaValida = false;
+                        break;
+                    }
+                }
+            }
+
+            if (experienciaValida && estudioValido && aspiracionSalValido &&
+                hojaDeVidaValido && generoValido && datosValidos && aceptaPoliticas && validacionDireccion) {
+                document.getElementById("enviar").style.display = "none";
+                document.getElementById("load").style.display = "";
+                submitformData();
+            } else {
+                alert('Error de validación. Revisa que todos los campos obligatorios se encuentren diligenciados');
+                document.getElementById("enviar").style.display = "";
+                document.getElementById("load").style.display = "none";
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Excepción al validar los datos: ' + error);
+            document.getElementById("enviar").style.display = "";
+            document.getElementById("load").style.display = "none";
+        }
+    }
+
+    function submitformData() {
+        const formData = new FormData();
+
+        const v_fechaNac = `${v_anio}-${v_mes}-${v_dia}`;
+
+        const fechasEstudio = {};
+        const fechasExperiencia = {};
+
+        for (let i = 1; i < 5; i++) {
+            const mes = window[`v_mesEstu${i}`];
+            const anio = window[`v_anioEstu${i}`];
+            fechasEstudio[`v_fechaEstu${i}`] = (anio && mes) ? `${mes} ${anio}` : '';
+        }
+        
+        for (let i = 1; i < 11; i++) {
+            const mes = window[`v_mesExp${i}`];
+            const anio = window[`v_anioExp${i}`];
+            fechasExperiencia[`v_fechaExp${i}`] = (anio && mes) ? `${mes} ${anio}` : '';
+        }
+
+        formData.append("cargo", '{{ idCargos }}');
+        formData.append("email", v_email);
+        formData.append("telefono", v_telefono);
+        formData.append("documento", v_documento);
+        formData.append("identificacion", v_identificacion);
+        formData.append("nombres", v_nombres);
+        formData.append("apellidos", v_apellidos);
+        formData.append("fechaNac", v_fechaNac);
+        formData.append("paisNacim", v_paisNacim);
+        formData.append("depNac", v_depNac)
+        formData.append("ciudadNac", v_ciudadNac);
+        formData.append("genero", gen);
+        formData.append("trabajoEnCrystal", v_trabajoEnCrystal);
+        formData.append("address", direccionComple);
+        formData.append("depResi", v_depResiden);
+        formData.append("ciudadResi", v_ciudadResi);
+
+        for (let i = 1; i < 5; i++) {
+            formData.append(`formacion${i}`, window[`v_formacion${i}`] || '');
+            formData.append(`areasEst${i}`, window[`v_areasEst${i}`] || '');
+            formData.append(`tarProfe${i}`, window[`v_tarProfe${i}`] || '');
+            formData.append(`institucion${i}`, window[`v_institucion${i}`] || '');
+            formData.append(`fechaEstu${i}`, fechasEstudio[`v_fechaEstu${i}`]);
+        }
+
+        for (let i = 1; i < 4; i++) {
+            formData.append(`idioma${i}`, window[`v_idioma${i}`] || '');
+            formData.append(`nivel${i}`, window[`v_nivel${i}`] || '');
+        }
+
+        for (let i = 1; i < 11; i++) { 
+            formData.append(`empresa${i}`, window[`v_empresa${i}`] || '');
+            formData.append(`cargo${i}`, window[`v_cargo${i}`] || '');
+            formData.append(`funciones${i}`, window[`v_funciones${i}`] || ''); 
+            formData.append(`fechaExp${i}`, fechasExperiencia[`v_fechaExp${i}`]);
+        }
+
+        formData.append("areasInte", v_areasInte);
+        formData.append("aspSal", v_aspSal);
+        formData.append("ultiSal", v_ultiSal);
+        formData.append("archivoHV", document.getElementById('file').files[0]);
+
+        if (window['v_telefonoOp']) {
+            formData.append("telefonoOp", v_telefonoOp);
+        }else{
+            formData.append("telefonoOp", "");
+        }
+
+        if (window['v_areaInteOtr']) {
+            formData.append("areaInteOtr", v_areaInteOtr);
+        }else{
+            formData.append("areaInteOtr", "");
+        }
+
+        const url = '/enviarForm/'
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrftoken,
+            },
+            body: formData
+        })
+            .then((response) => {
+                document.getElementById("enviar").style.display = "";
+                document.getElementById("load").style.display = "none";
+                if (response.status === 500) {
+                    alert("Error!! no se pudo guardar la información.");
+                    response.blob().then(blob => {
+                        window.open(URL.createObjectURL(blob));
+                    });
+                } else {
+                    if (response.status === 200) {
+                        window.location.href = "{% url 'gracias' %}";
+                    } else {
+                        alert(`Fallo el guardado de los datos (Error ${response.status}).`);
+                    }
+                }
+            }, (err) => {
+                console.error(err);
+                alert('Fallo la comunicación con el servidor. Comprueba que la conexión a internet sea estable y vuelve a intentarlo.');
+            });
+    }
+</script>
+</body>
+</html>

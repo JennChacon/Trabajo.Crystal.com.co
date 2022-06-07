@@ -1,0 +1,743 @@
+[
+    {
+        "codigo": 1,
+        "nombre": "Afar"
+    },
+    {
+        "codigo": 2,
+        "nombre": "Abjaso"
+    },
+    {
+        "codigo": 3,
+        "nombre": "Afrikaans"
+    },
+    {
+        "codigo": 4,
+        "nombre": "Aimara"
+    },
+    {
+        "codigo": 5,
+        "nombre": "Akano"
+    },
+    {
+        "codigo": 6,
+        "nombre": "Albanés"
+    },
+    {
+        "codigo": 7,
+        "nombre": "Alemán"
+    },
+    {
+        "codigo": 8,
+        "nombre": "Amárico"
+    },
+    {
+        "codigo": 9,
+        "nombre": "Árabe"
+    },
+    {
+        "codigo": 10,
+        "nombre": "Aragonés"
+    },
+    {
+        "codigo": 11,
+        "nombre": "Armenio"
+    },
+    {
+        "codigo": 12,
+        "nombre": "Asamés"
+    },
+    {
+        "codigo": 13,
+        "nombre": "Avar"
+    },
+    {
+        "codigo": 14,
+        "nombre": "Avéstico"
+    },
+    {
+        "codigo": 15,
+        "nombre": "Azerí"
+    },
+    {
+        "codigo": 16,
+        "nombre": "Bambara"
+    },
+    {
+        "codigo": 17,
+        "nombre": "Baskir"
+    },
+    {
+        "codigo": 18,
+        "nombre": "Bengalí"
+    },
+    {
+        "codigo": 19,
+        "nombre": "Bhojpurí"
+    },
+    {
+        "codigo": 20,
+        "nombre": "Bielorruso"
+    },
+    {
+        "codigo": 21,
+        "nombre": "Birmano"
+    },
+    {
+        "codigo": 22,
+        "nombre": "Bislama"
+    },
+    {
+        "codigo": 23,
+        "nombre": "Bosnio"
+    },
+    {
+        "codigo": 24,
+        "nombre": "Bretón"
+    },
+    {
+        "codigo": 25,
+        "nombre": "Búlgaro"
+    },
+    {
+        "codigo": 26,
+        "nombre": "Cachemiro"
+    },
+    {
+        "codigo": 27,
+        "nombre": "Camboyano"
+    },
+    {
+        "codigo": 28,
+        "nombre": "Canarés"
+    },
+    {
+        "codigo": 29,
+        "nombre": "Catalán"
+    },
+    {
+        "codigo": 30,
+        "nombre": "Chamorro"
+    },
+    {
+        "codigo": 31,
+        "nombre": "Checheno"
+    },
+    {
+        "codigo": 32,
+        "nombre": "Checo"
+    },
+    {
+        "codigo": 33,
+        "nombre": "Chichewa"
+    },
+    {
+        "codigo": 34,
+        "nombre": "Chino"
+    },
+    {
+        "codigo": 35,
+        "nombre": "Chuan"
+    },
+    {
+        "codigo": 36,
+        "nombre": "Chuvasio"
+    },
+    {
+        "codigo": 37,
+        "nombre": "Cingalés"
+    },
+    {
+        "codigo": 38,
+        "nombre": "Coreano"
+    },
+    {
+        "codigo": 39,
+        "nombre": "Córnico"
+    },
+    {
+        "codigo": 40,
+        "nombre": "Corso"
+    },
+    {
+        "codigo": 41,
+        "nombre": "Cree"
+    },
+    {
+        "codigo": 42,
+        "nombre": "Croata"
+    },
+    {
+        "codigo": 43,
+        "nombre": "Danés"
+    },
+    {
+        "codigo": 44,
+        "nombre": "Dzongkha"
+    },
+    {
+        "codigo": 45,
+        "nombre": "Eslavo eclesiástico antiguo"
+    },
+    {
+        "codigo": 46,
+        "nombre": "Eslovaco"
+    },
+    {
+        "codigo": 47,
+        "nombre": "Esloveno"
+    },
+    {
+        "codigo": 48,
+        "nombre": "Español"
+    },
+    {
+        "codigo": 49,
+        "nombre": "Esperanto"
+    },
+    {
+        "codigo": 50,
+        "nombre": "Estonio"
+    },
+    {
+        "codigo": 51,
+        "nombre": "Ewe"
+    },
+    {
+        "codigo": 52,
+        "nombre": "Feroés"
+    },
+    {
+        "codigo": 53,
+        "nombre": "Fijiano"
+    },
+    {
+        "codigo": 54,
+        "nombre": "Finés"
+    },
+    {
+        "codigo": 55,
+        "nombre": "Francés"
+    },
+    {
+        "codigo": 56,
+        "nombre": "Frisón"
+    },
+    {
+        "codigo": 57,
+        "nombre": "Fula"
+    },
+    {
+        "codigo": 58,
+        "nombre": "Gaélico escocés"
+    },
+    {
+        "codigo": 59,
+        "nombre": "Galés"
+    },
+    {
+        "codigo": 60,
+        "nombre": "Gallego"
+    },
+    {
+        "codigo": 61,
+        "nombre": "Georgiano"
+    },
+    {
+        "codigo": 62,
+        "nombre": "Griego"
+    },
+    {
+        "codigo": 63,
+        "nombre": "Groenlandés"
+    },
+    {
+        "codigo": 64,
+        "nombre": "Guaraní"
+    },
+    {
+        "codigo": 65,
+        "nombre": "Guyaratí"
+    },
+    {
+        "codigo": 66,
+        "nombre": "Haitiano"
+    },
+    {
+        "codigo": 67,
+        "nombre": "Hausa"
+    },
+    {
+        "codigo": 68,
+        "nombre": "Hebreo"
+    },
+    {
+        "codigo": 69,
+        "nombre": "Herero"
+    },
+    {
+        "codigo": 70,
+        "nombre": "Hindi"
+    },
+    {
+        "codigo": 71,
+        "nombre": "Hiri motu"
+    },
+    {
+        "codigo": 72,
+        "nombre": "Húngaro"
+    },
+    {
+        "codigo": 73,
+        "nombre": "Ido"
+    },
+    {
+        "codigo": 74,
+        "nombre": "Igbo"
+    },
+    {
+        "codigo": 75,
+        "nombre": "Indonesio"
+    },
+    {
+        "codigo": 76,
+        "nombre": "Inglés"
+    },
+    {
+        "codigo": 77,
+        "nombre": "Interlingua"
+    },
+    {
+        "codigo": 78,
+        "nombre": "Inuktitut"
+    },
+    {
+        "codigo": 79,
+        "nombre": "Inupiaq"
+    },
+    {
+        "codigo": 80,
+        "nombre": "Irlandés"
+    },
+    {
+        "codigo": 81,
+        "nombre": "Islandés"
+    },
+    {
+        "codigo": 82,
+        "nombre": "Italiano"
+    },
+    {
+        "codigo": 83,
+        "nombre": "Japonés"
+    },
+    {
+        "codigo": 84,
+        "nombre": "Javanés"
+    },
+    {
+        "codigo": 85,
+        "nombre": "Kanuri"
+    },
+    {
+        "codigo": 86,
+        "nombre": "Kazajo"
+    },
+    {
+        "codigo": 87,
+        "nombre": "Kikuyu"
+    },
+    {
+        "codigo": 88,
+        "nombre": "Kirguís"
+    },
+    {
+        "codigo": 89,
+        "nombre": "Kirundi"
+    },
+    {
+        "codigo": 90,
+        "nombre": "Komi"
+    },
+    {
+        "codigo": 91,
+        "nombre": "Kongo"
+    },
+    {
+        "codigo": 92,
+        "nombre": "Kuanyama"
+    },
+    {
+        "codigo": 93,
+        "nombre": "Kurdo"
+    },
+    {
+        "codigo": 94,
+        "nombre": "Lao"
+    },
+    {
+        "codigo": 95,
+        "nombre": "Latín"
+    },
+    {
+        "codigo": 96,
+        "nombre": "Letón"
+    },
+    {
+        "codigo": 97,
+        "nombre": "Limburgués"
+    },
+    {
+        "codigo": 98,
+        "nombre": "Lingala"
+    },
+    {
+        "codigo": 99,
+        "nombre": "Lituano"
+    },
+    {
+        "codigo": 100,
+        "nombre": "Luba-katanga"
+    },
+    {
+        "codigo": 101,
+        "nombre": "Luganda"
+    },
+    {
+        "codigo": 102,
+        "nombre": "Luxemburgués"
+    },
+    {
+        "codigo": 103,
+        "nombre": "Macedonio"
+    },
+    {
+        "codigo": 104,
+        "nombre": "Malayalam"
+    },
+    {
+        "codigo": 105,
+        "nombre": "Malayo"
+    },
+    {
+        "codigo": 106,
+        "nombre": "Maldivo"
+    },
+    {
+        "codigo": 107,
+        "nombre": "Malgache"
+    },
+    {
+        "codigo": 108,
+        "nombre": "Maltés"
+    },
+    {
+        "codigo": 109,
+        "nombre": "Manés"
+    },
+    {
+        "codigo": 110,
+        "nombre": "Maorí"
+    },
+    {
+        "codigo": 111,
+        "nombre": "Maratí"
+    },
+    {
+        "codigo": 112,
+        "nombre": "Marshalés"
+    },
+    {
+        "codigo": 113,
+        "nombre": "Moldavo"
+    },
+    {
+        "codigo": 114,
+        "nombre": "Mongol"
+    },
+    {
+        "codigo": 115,
+        "nombre": "Nauruano"
+    },
+    {
+        "codigo": 116,
+        "nombre": "Navajo"
+    },
+    {
+        "codigo": 117,
+        "nombre": "Ndebele del norte"
+    },
+    {
+        "codigo": 118,
+        "nombre": "Ndebele del sur"
+    },
+    {
+        "codigo": 119,
+        "nombre": "Ndonga"
+    },
+    {
+        "codigo": 120,
+        "nombre": "Neerlandés"
+    },
+    {
+        "codigo": 121,
+        "nombre": "Nepalí"
+    },
+    {
+        "codigo": 122,
+        "nombre": "Noruego"
+    },
+    {
+        "codigo": 123,
+        "nombre": "Noruego bokmål"
+    },
+    {
+        "codigo": 124,
+        "nombre": "Nynorsk"
+    },
+    {
+        "codigo": 125,
+        "nombre": "Occidental"
+    },
+    {
+        "codigo": 126,
+        "nombre": "Occitano"
+    },
+    {
+        "codigo": 127,
+        "nombre": "Ojibwa"
+    },
+    {
+        "codigo": 128,
+        "nombre": "Oriya"
+    },
+    {
+        "codigo": 129,
+        "nombre": "Oromo"
+    },
+    {
+        "codigo": 130,
+        "nombre": "Osético"
+    },
+    {
+        "codigo": 131,
+        "nombre": "Pali"
+    },
+    {
+        "codigo": 132,
+        "nombre": "Panyabí"
+    },
+    {
+        "codigo": 133,
+        "nombre": "Pastú"
+    },
+    {
+        "codigo": 134,
+        "nombre": "Persa"
+    },
+    {
+        "codigo": 135,
+        "nombre": "Polaco"
+    },
+    {
+        "codigo": 136,
+        "nombre": "Portugués"
+    },
+    {
+        "codigo": 137,
+        "nombre": "Quechua"
+    },
+    {
+        "codigo": 138,
+        "nombre": "Retorrománico"
+    },
+    {
+        "codigo": 139,
+        "nombre": "Ruandés"
+    },
+    {
+        "codigo": 140,
+        "nombre": "Rumano"
+    },
+    {
+        "codigo": 141,
+        "nombre": "Ruso"
+    },
+    {
+        "codigo": 142,
+        "nombre": "Sami septentrional"
+    },
+    {
+        "codigo": 143,
+        "nombre": "Samoano"
+    },
+    {
+        "codigo": 144,
+        "nombre": "Sango"
+    },
+    {
+        "codigo": 145,
+        "nombre": "Sánscrito"
+    },
+    {
+        "codigo": 146,
+        "nombre": "Sardo"
+    },
+    {
+        "codigo": 147,
+        "nombre": "Serbio"
+    },
+    {
+        "codigo": 148,
+        "nombre": "Sesotho"
+    },
+    {
+        "codigo": 149,
+        "nombre": "Setsuana"
+    },
+    {
+        "codigo": 150,
+        "nombre": "Shona"
+    },
+    {
+        "codigo": 151,
+        "nombre": "Sindhi"
+    },
+    {
+        "codigo": 152,
+        "nombre": "Somalí"
+    },
+    {
+        "codigo": 153,
+        "nombre": "Suajili"
+    },
+    {
+        "codigo": 154,
+        "nombre": "Suazi"
+    },
+    {
+        "codigo": 155,
+        "nombre": "Sueco"
+    },
+    {
+        "codigo": 156,
+        "nombre": "Sundanés"
+    },
+    {
+        "codigo": 157,
+        "nombre": "Tagalo"
+    },
+    {
+        "codigo": 158,
+        "nombre": "Tahitiano"
+    },
+    {
+        "codigo": 159,
+        "nombre": "Tailandés"
+    },
+    {
+        "codigo": 160,
+        "nombre": "Tamil"
+    },
+    {
+        "codigo": 161,
+        "nombre": "Tártaro"
+    },
+    {
+        "codigo": 162,
+        "nombre": "Tayiko"
+    },
+    {
+        "codigo": 163,
+        "nombre": "Telugú"
+    },
+    {
+        "codigo": 164,
+        "nombre": "Tibetano"
+    },
+    {
+        "codigo": 165,
+        "nombre": "Tigriña"
+    },
+    {
+        "codigo": 166,
+        "nombre": "Tongano"
+    },
+    {
+        "codigo": 167,
+        "nombre": "Tsonga"
+    },
+    {
+        "codigo": 168,
+        "nombre": "Turco"
+    },
+    {
+        "codigo": 169,
+        "nombre": "Turcomano"
+    },
+    {
+        "codigo": 170,
+        "nombre": "Twi"
+    },
+    {
+        "codigo": 171,
+        "nombre": "Ucraniano"
+    },
+    {
+        "codigo": 172,
+        "nombre": "Uigur"
+    },
+    {
+        "codigo": 173,
+        "nombre": "Urdu"
+    },
+    {
+        "codigo": 174,
+        "nombre": "Uzbeko"
+    },
+    {
+        "codigo": 175,
+        "nombre": "Valón"
+    },
+    {
+        "codigo": 176,
+        "nombre": "Vascuence"
+    },
+    {
+        "codigo": 177,
+        "nombre": "Venda"
+    },
+    {
+        "codigo": 178,
+        "nombre": "Vietnamita"
+    },
+    {
+        "codigo": 179,
+        "nombre": "Volapük"
+    },
+    {
+        "codigo": 180,
+        "nombre": "Wolof"
+    },
+    {
+        "codigo": 181,
+        "nombre": "Xhosa"
+    },
+    {
+        "codigo": 182,
+        "nombre": "Yi de Sichuán"
+    },
+    {
+        "codigo": 183,
+        "nombre": "Yídish"
+    },
+    {
+        "codigo": 184,
+        "nombre": "Yoruba"
+    },
+    {
+        "codigo": 185,
+        "nombre": "Zulú"
+    }
+
+]

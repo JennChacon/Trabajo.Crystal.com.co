@@ -1,0 +1,307 @@
+[
+    {
+        "codigo" : 1,
+        "nombre" : "Administración",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 2,
+        "nombre" : "Agronomía",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 3,
+        "nombre" : "Antropología, Artes Liberales",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 4,
+        "nombre" : "Arquitectura y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 5,
+        "nombre" : "Artes Plásticas, Visuales y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 6,
+        "nombre" : "Artes Representativas",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 7,
+        "nombre" : "Bacteriología",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 8,
+        "nombre" : "Bibliotecología, otros de Ciencias Sociales y Humanas",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 9,
+        "nombre" : "Biología, Microbiología y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 10,
+        "nombre" : "Ciencia Política, Relaciones Internacionales",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 11,
+        "nombre" : "Comunicación Social, Periodismo y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 12,
+        "nombre" : "Contaduría Pública",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 13,
+        "nombre" : "Deportes, Educación Física y Recreación",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 14,
+        "nombre" : "Derecho y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 15,
+        "nombre" : "Diseño",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 16,
+        "nombre" : "Economía",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 17,
+        "nombre" : "Educación",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 18,
+        "nombre" : "Enfermería",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 19,
+        "nombre" : "Filosofía, Teología y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 20,
+        "nombre" : "Física",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 21,
+        "nombre" : "Formación relacionada con el campo militar o policial",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 22,
+        "nombre" : "Geografía, Historia",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 23,
+        "nombre" : "Geología, otros programas de Ciencias Naturales",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 24,
+        "nombre" : "Ingeniería Administrativa y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 25,
+        "nombre" : "Ingeniería Agrícola, Forestal y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 26,
+        "nombre" : "Ingeniería Agroindustrial, Alimentos y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 27,
+        "nombre" : "Ingeniería Agrónoma, Pecuaria y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 28,
+        "nombre" : "Ingeniería Ambiental, Sanitaria y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 29,
+        "nombre" : "Ingeniería Biomédica y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 30,
+        "nombre" : "Ingeniería Civil y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 31,
+        "nombre" : "Ingeniería de Minas, Metalurgia y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 32,
+        "nombre" : "Ingeniería de Sistemas, Telemática y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 33,
+        "nombre" : "Ingeniería Eléctrica y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 34,
+        "nombre" : "Ingeniería Electrónica, Telecomunicaciones y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 35,
+        "nombre" : "Ingeniería Industrial y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 36,
+        "nombre" : "Ingeniería Mecánica y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 37,
+        "nombre" : "Ingeniería Química y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 38,
+        "nombre" : "Instrumentación Quirúrgica",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 39,
+        "nombre" : "Lenguas Modernas, Literatura, Lingüística y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 40,
+        "nombre" : "Matemáticas, Estadística y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 41,
+        "nombre" : "Medicina",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 42,
+        "nombre" : "Medicina Veterinaria",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 43,
+        "nombre" : "Música",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 44,
+        "nombre" : "Nutrición y Dietética",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 45,
+        "nombre" : "Odontología",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 46,
+        "nombre" : "Optometría, otros programas de Ciencias de la Salud",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 47,
+        "nombre" : "Otras Ingenierías",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 48,
+        "nombre" : "Otros programas asociados a Bellas Artes",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 49,
+        "nombre" : "Psicología",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 50,
+        "nombre" : "Publiccodigoad y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 51,
+        "nombre" : "Química y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 52,
+        "nombre" : "Salud Pública",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 53,
+        "nombre" : "Sociología, Trabajo Social y afines",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 54,
+        "nombre" : "Terapias",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 55,
+        "nombre" : "Zootecnia",
+        "grupoArea" : 1
+    },
+    {
+        "codigo" : 56,
+        "nombre" : "Preescolar",
+        "grupoArea" : 2
+    },
+    {
+        "codigo" : 57,
+        "nombre" : "Básica Primaria (1° - 5°)",
+        "grupoArea" : 3
+    },
+    {
+        "codigo" : 58,
+        "nombre" : "Básica Secundaria (6° - 9°)",
+        "grupoArea" : 4
+    },
+    {
+        "codigo" : 59,
+        "nombre" : "Bachillerato Académico",
+        "grupoArea" : 5
+    },
+    {
+        "codigo" : 60,
+        "nombre" : "Bachillerato Comercial",
+        "grupoArea" : 5
+    },
+    {
+        "codigo" : 61,
+        "nombre" : "Bachillerato Técnico",
+        "grupoArea" : 5
+    }
+]
